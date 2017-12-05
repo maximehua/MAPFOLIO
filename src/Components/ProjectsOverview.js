@@ -59,10 +59,10 @@ class ProjectsOverview extends Component {
     _searchFunction = async () => {
         const raw = await getCurrentProjects(this.props.user.id) //this.state.objects
         const filtered = raw.filter(p =>
-            p.name.normalize('NFD').replace(/[\u0300-\u036f]/g, "").toLowerCase().includes(this.state.searchText)
-            || p.description.normalize('NFD').replace(/[\u0300-\u036f]/g, "").toLowerCase().includes(this.state.searchText)
-            || p.address.normalize('NFD').replace(/[\u0300-\u036f]/g, "").toLowerCase().includes(this.state.searchText)
-            || p.id.normalize('NFD').replace(/[\u0300-\u036f]/g, "").toLowerCase().includes(this.state.searchText)
+            p.name.normalize('NFD').replace(/[\u0300-\u036f]/g, "").toLowerCase().includes(this.state.searchText.toLowerCase())
+            || p.description.normalize('NFD').replace(/[\u0300-\u036f]/g, "").toLowerCase().includes(this.state.searchText.toLowerCase())
+            || p.address.normalize('NFD').replace(/[\u0300-\u036f]/g, "").toLowerCase().includes(this.state.searchText.toLowerCase())
+            || p.id.normalize('NFD').replace(/[\u0300-\u036f]/g, "").toLowerCase().includes(this.state.searchText.toLowerCase())
         )
         this.setState({
             ...this.state,
