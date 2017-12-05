@@ -4,14 +4,13 @@ import { alert } from './avatars.js';
 import { editProjectNotes } from './backend.js'
 
 const darkGreen = "#24282b";
-// const green = "#4d6059";
 const lightGreen = "#7f8d89";
 
 const Alert = styled.div`
-display: flex;
-padding: 10px;
-box-sizing: border-box;
-width: 100%;
+    display: flex;
+    padding: 10px;
+    box-sizing: border-box;
+    width: 100%;
 `
 
 const AlertImageDiv = styled.div`
@@ -23,17 +22,17 @@ const AlertImageDiv = styled.div`
 `
 
 const AlertImage = styled.img`
-filter: ${props => props.creatingAlert ? null : 'grayscale(100%)'};
-width: 30px;
-height: 30px;
+    filter: ${props => props.creatingAlert ? null : 'grayscale(100%)'};
+    width: 30px;
+    height: 30px;
 `
 
 const AddAlertDiv = styled.div`
-display: flex;
-align-items: center;
-justify-content: center;
-width: 15%;
-height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 15%;
+    height: 30px;
 `
 
 const AddAlert = styled.button`
@@ -61,23 +60,23 @@ const AddAlert = styled.button`
 `
 
 const AlertDescription = styled.p`
-display: flex;
-align-items: center;
-justify-content: left;
-height: 30px;
-width: -webkit-fill-available;
-margin: 0;
-padding: 0 1em;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    height: 30px;
+    width: -webkit-fill-available;
+    margin: 0;
+    padding: 0 1em;
 `
 
 const WrapAlerts = styled.div`
-display: flex;
-width: 85%
+    display: flex;
+    width: 85%
 `
 
 const Flex = styled.div`
-display: flex;
-width: 100%
+    display: flex;
+    width: 100%
 `
 
 class AlertInfo extends PureComponent {
@@ -91,7 +90,7 @@ class AlertInfo extends PureComponent {
 
     _handleClick = async (event) => {
         event.preventDefault();
-            if (this.state.alertDescription) {
+        if (this.state.alertDescription) {
             // export async function editProjectNotes(userId, projectId, inputText)
             await editProjectNotes(this.props.userID, this.props.projectID, this.state.alertDescription)
             await this.props.updateProjects()
@@ -111,7 +110,7 @@ class AlertInfo extends PureComponent {
     }
 
     _handleInput = () => {
-        this.setState({ alertDescription: this.alertText.value})
+        this.setState({ alertDescription: this.alertText.value })
     }
 
     render() {
@@ -120,7 +119,7 @@ class AlertInfo extends PureComponent {
                 {this.props.alert.length ?
                     (<WrapAlerts>
                         <AlertImageDiv>
-                            <AlertImage src={alert} alt="Alert" creatingAlert={this.props.alert}/>
+                            <AlertImage src={alert} alt="Alert" creatingAlert={this.props.alert} />
                         </AlertImageDiv>
                         <AlertDescription>
                             {this.props.alert}
@@ -130,14 +129,14 @@ class AlertInfo extends PureComponent {
                     (<WrapAlerts>
                         {this.state.creatingAlert ?
                             (<Flex><AlertImageDiv>
-                                <AlertImage src={alert} alt="Alert" creatingAlert={this.state.creatingAlert}/>
+                                <AlertImage src={alert} alt="Alert" creatingAlert={this.state.creatingAlert} />
                             </AlertImageDiv>
                                 <AlertDescription>
-                                    <input onInput={this._handleInput} ref={r => this.alertText = r} placeholder="Add Alert Description" value={this.state.alertDescription}/>
+                                    <input onInput={this._handleInput} ref={r => this.alertText = r} placeholder="Add Alert Description" value={this.state.alertDescription} />
                                 </AlertDescription></Flex>)
                             :
                             (<Flex><AlertImageDiv>
-                                <AlertImage src={alert} alt="Alert"  creatingAlert={this.state.creatingAlert}/>
+                                <AlertImage src={alert} alt="Alert" creatingAlert={this.state.creatingAlert} />
                             </AlertImageDiv>
                                 <AlertDescription>
                                     No active alerts.

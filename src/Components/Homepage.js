@@ -5,26 +5,24 @@ import { Link } from 'react-router-dom';
 import '../App.css';
 
 const darkGreen = "#24282b";
-// const green = "#4d6059";
 const lightGreen = "#7f8d89";
 
-
 const Wrapper = styled.div`
-background-color: ${darkGreen};
-height: 100vh;
-display: block;
-justify-content: center;
-align-items: center;
+    background-color: ${darkGreen};
+    height: 100vh;
+    display: block;
+    justify-content: center;
+    align-items: center;
 `;
 
 const Row = styled.div`
-width: 100%
+    width: 100%
 `;
 
 const ImageRow = styled.div`
-width: 100%;
-padding: 5% 0 0 0;
-margins: auto;
+    width: 100%;
+    padding: 5% 0 0 0;
+    margins: auto;
 `;
 
 const LoginButton = styled.button`
@@ -60,7 +58,7 @@ const TitleWrapper = styled.div`
 `
 
 const TitleOpaque = styled.h1`
-opacity: 0.6;
+    opacity: 0.6;
 `
 
 class Homepage extends Component {
@@ -104,7 +102,6 @@ class Homepage extends Component {
                         :
                         <LoginButton onClick={this.props.handleLogin}>LOGIN</LoginButton>
                     }
-
                 </Row>
             </Wrapper>
         )

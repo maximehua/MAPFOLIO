@@ -8,63 +8,60 @@ import shouldPureComponentUpdate from 'react-pure-render/function';
 import moment from 'moment'
 
 const darkGreen = "#24282b";
-// const green = "#4d6059";
 const lightGreen = "#7f8d89";
 
 const Wrapper = styled.div`
-display: block;
-width: 40vw;
-max-width: 40vw;
+    display: block;
+    width: 40vw;
+    max-width: 40vw;
 `
 
 const Table = styled.table`
-text-align: left;
-width: 100%;
-margins: 0 0px;
-padding: 0 20px;
+    text-align: left;
+    width: 100%;
+    margins: 0 0px;
+    padding: 0 20px;
 `
 
 const Column1 = styled.td`
-width: 30%
+    width: 30%
 `
 
 const Column2 = styled.td`
 `
 
 const Rows = styled.tr`
-margins: 0;
+    margins: 0;
 `
 
 const Header = styled.div`
-display: flex;
-align-items: center;
-padding: 15px;
+    display: flex;
+    align-items: center;
+    padding: 15px;
 `
 
 const NewProject = styled.button`
-color: white;
-font-size: .8em;
-margin: 1em;
-width: 200px;
-height: 20px;
-background-color: ${lightGreen};
-padding: 0.25em 1em;
-border: none;
-border-radius: 20px;
-
-
-
-&:hover{
-    color: ${darkGreen};
-    background-color: white;
-    -webkit-filter: drop-shadow(0px 0px 12px rgba(0, 231, 255, 0.8));
-    -webkit-transition: 0.3s;
-}
-
-&:active {
     color: white;
-    background-color: ${darkGreen};
+    font-size: .8em;
+    margin: 1em;
+    width: 200px;
+    height: 20px;
+    background-color: ${lightGreen};
+    padding: 0.25em 1em;
+    border: none;
+    border-radius: 20px;
+
+    &:hover{
+        color: ${darkGreen};
+        background-color: white;
+        -webkit-filter: drop-shadow(0px 0px 12px rgba(0, 231, 255, 0.8));
+        -webkit-transition: 0.3s;
     }
+
+    &:active {
+        color: white;
+        background-color: ${darkGreen};
+        }
 `
 
 
@@ -124,8 +121,8 @@ class CreateProject extends Component {
                     newProjectObject: data,
                 });
                 return data
-            } )
-            .then(data=>this.props.setSelected(data))
+            })
+            .then(data => this.props.setSelected(data))
     }
 
     render() {

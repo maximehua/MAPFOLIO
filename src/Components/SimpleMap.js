@@ -19,41 +19,39 @@ const API_KEY = 'AIzaSyBfxtILkIqiz2_jVj9PjbvUQYJpJI9jzv0'
 // Image is based off completion status
 
 const darkGreen = "#24282b";
-// const green = "#4d6059";
 const lightGreen = "#7f8d89";
 
 const TestDiv = styled.div`
-position: absolute;
-min-width: ${(props) => props.isSelected || props.creatingProject || props.justCreated ? `60vw` : `0`};
-top: 10vh;
-left: 10vh;
-z-index: 100000;
-height: 80vh;
-background-color: rgba(0, 0, 0, 0.6);
-display: flex;
-border-radius: 10px;
--webkit-transition: 1s;
-
+    position: absolute;
+    min-width: ${(props) => props.isSelected || props.creatingProject || props.justCreated ? `60vw` : `0`};
+    top: 10vh;
+    left: 10vh;
+    z-index: 100000;
+    height: 80vh;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    border-radius: 10px;
+    -webkit-transition: 1s;
 }
 `
 
 const TestDivLeft = styled.div`
-min-width: 20vw; 
+    min-width: 20vw; 
 `
 
 const TestDivRight = styled.div`
-width: 100%;
-height: 100%;
-position: absolute;
-white-space: nowrap;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    white-space: nowrap;
 `
 
 const Wrapper = styled.div`
-  width: 100%;
-  height: 100%;
-  color: white;
+    width: 100%;
+    height: 100%;
+    color: white;
     *:focus {
-    outline: none;}
+        outline: none;}
 `
 
 const ProjectsList = styled.div`
@@ -67,8 +65,8 @@ const ProjectsList = styled.div`
 `
 
 const TestDivRightWrapper = styled.div`
-width: 100%;
-position: relative;
+    width: 100%;
+    position: relative;
 `
 
 const NewProject = styled.button`
@@ -88,7 +86,6 @@ const NewProject = styled.button`
         color: ${darkGreen};
         background-color: white;
         -webkit-filter: drop-shadow(0px 0px 12px rgba(0, 231, 255, 0.8));
-
     }
 
     &:active {
@@ -98,46 +95,46 @@ const NewProject = styled.button`
 `
 
 const NewProjectDiv = styled.div`
-height: 10%;
-display: flex;
-align-items: center;
-justify-content: center;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 `
 
 const Title = styled.div`
-height: 5%;
-padding: 0px 5px;
-display: flex;
-align-items: left;
-justify-content: center;
-text-align: left;
+    height: 5%;
+    padding: 0px 5px;
+    display: flex;
+    align-items: left;
+    justify-content: center;
+    text-align: left;
 `
 
 const SearchFormDiv = styled.div`
-width: 100%;
-display: flex;
-align-items: center;
-justify-content: center;
-opacity: .8;
-padding: 0px 5px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: .8;
+    padding: 0px 5px;
 `
 
 const SearchFormButton = styled.div`
-width: 25px;
-padding: 3px;
-display: flex;
-align-items: center;
-justify-content: center;
+    width: 25px;
+    padding: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 `
 
 const SearchFrom = styled.form`
-width: 100%;
-height: 100%;
-padding: 3px;
-display: flex;
-align-items: center;
-justify-content: center;
-padding: 0px;
+    width: 100%;
+    height: 100%;
+    padding: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0px;
 `
 
 const SearchClearButtons = styled.button`
@@ -152,8 +149,8 @@ const SearchClearButtons = styled.button`
     border-radius: 50%;
     -webkit-transition: 0.3s;
     display: flex;
-  align-items: center;
-  justify-content: center;
+    align-items: center;
+    justify-content: center;
 
     &:hover{
         color: ${darkGreen};
@@ -169,12 +166,12 @@ const SearchClearButtons = styled.button`
 
 
 const SearchImages = styled.img`
-width: 15px;
-height: 15px;
+    width: 15px;
+    height: 15px;
 `
 
 const SearchButtons = styled.div`
-    display: flex;
+display: flex;
   align-items: center;
   justify-content: center;
 `

@@ -138,9 +138,9 @@ export async function getCompletedProjects(userId) {
   })).filter(p => checkCompletionStatus(p)).map(p => ({ ...p, status: calculateProgressStatus(p) }))
   return filteredProjects
   // function to get completed projects
-  //if true  then set current: false (not in this function)
+  // if true  then set current: false (not in this function)
   // calls the checkalltakscompleted function in a filter over all the projects
-  //calculateProgressStatus
+  // calculateProgressStatus
 }
 
 // returns an array of objects with all projects that match the search criteria
